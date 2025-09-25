@@ -3,4 +3,4 @@ MULTI_AI_AGENT_PROJECT.egg-info
 logs/
 .env
 __pycache__/
-
+FULL_DOCUMENTATION.md

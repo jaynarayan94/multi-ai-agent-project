@@ -63,7 +63,7 @@ pipeline {
             }
         }
 
-        Stage for ECS deployment (uncomment when ready)
+        // Stage for ECS deployment (uncomment when ready)
         stage('Deploy to ECS Fargate') {
             steps {
                 withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-token']]) {

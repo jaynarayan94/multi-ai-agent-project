@@ -4,3 +4,4 @@ logs/
 .env
 __pycache__/
 FULL_DOCUMENTATION.md
+jenkins-docker-permission-fix.md

@@ -63,21 +63,21 @@ pipeline {
             }
         }
 
-        // Stage for ECS deployment (uncomment when ready)
-        // stage('Deploy to ECS Fargate') {
-        //     steps {
-        //         withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-token']]) {
-        //             script {
-        //                 sh """
-        //                 aws ecs update-service \
-        //                   --cluster multi-ai-agent-cluster \
-        //                   --service multi-ai-agent-def-service-shqlo39p \
-        //                   --force-new-deployment \
-        //                   --region ${AWS_REGION}
-        //                 """
-        //             }
-        //         }
-        //     }
-        // }
+        Stage for ECS deployment (uncomment when ready)
+        stage('Deploy to ECS Fargate') {
+            steps {
+                withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-token']]) {
+                    script {
+                        sh """
+                        aws ecs update-service \
+                          --cluster multi-ai-agent-cluster1 \
+                          --service multi-ai-agent-def-service-89v2vjpc \
+                          --force-new-deployment \
+                          --region ${AWS_REGION}
+                        """
+                    }
+                }
+            }
+        }
     }
 }

@@ -5,7 +5,7 @@ pipeline {
         SONAR_PROJECT_KEY = 'multi-ai-agent'
         SONAR_SCANNER_HOME = tool 'sonarqubescanner'
         AWS_REGION = 'us-east-1'
-        ECR_REPO = 'multi-ai-agent'
+        ECR_REPO = 'my-repo'
         IMAGE_TAG = 'latest'
     }
 
